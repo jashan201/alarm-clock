@@ -1,6 +1,57 @@
 @charset "utf-8";
 
+body {
+    background-image: url(../images/background.jpg);
+}
+
 .container {
     width: min(100% - 30px, 1080px);
+    height: 100vh;
     margin-inline: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    display: grid;
+   place-items: center;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+#timer {
+    display: flex;
+}
+
+#timer h2 {
+    font-size: 30px;
+}
+
+.buttons {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=text] {
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff96;
+    border-radius: 50px;
+}
+
+button {
+    width: 160px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #245c0e;
 }
