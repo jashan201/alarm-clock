@@ -47,7 +47,7 @@ document.querySelector('.set-alarm').addEventListener('click', function() {
 
     // Validate the input values
     if (hoursValue === '' || minutesValue === '') {
-        alert('Please enter both hours and minutes');
+        document.querySelector('.set-time').textContent = 'Please enter both hours and minutes';
         return; // Exit the function if any input field is empty
     }
 
@@ -55,7 +55,7 @@ document.querySelector('.set-alarm').addEventListener('click', function() {
     const hoursNumber = parseInt(hoursValue, 10);
     const minutesNumber = parseInt(minutesValue, 10);
     if (isNaN(hoursNumber) || isNaN(minutesNumber) || hoursNumber < 0 || hoursNumber > 23 || minutesNumber < 0 || minutesNumber > 59) {
-        alert('Please enter valid hours (0-23) and minutes (0-59)');
+        document.querySelector('.set-time').textContent = 'Please enter valid hours (0-23) and minutes (0-59)';
         return; // Exit the function if input values are invalid
     }
 
@@ -66,7 +66,7 @@ document.querySelector('.set-alarm').addEventListener('click', function() {
     document.querySelector('.hours').value = '';
     document.querySelector('.minutes').value = '';
 
-    alert('Alarm set for ' + document.querySelector('.set-time').textContent);
+    document.querySelector('set-time').textContent = 'Alarm set for ' + document.querySelector('.set-time').textContent;
 });
 
 // Function to compare current time with set alarm time and play audio when they match
@@ -82,7 +82,7 @@ function compareTime() {
     // Check if current time matches set alarm time
     if (currentHours === setHours && currentMinutes === setMinutes) {
         // Trigger alarm
-        alert('Time to wake up!');
+        document.querySelector('.set-time').textContent = 'Time to wake up!';
         // Play audio
         const alarmAudio = new Audio('../assets/media/digital-alarm-beeping.mp3');
         alarmAudio.play();
