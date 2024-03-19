@@ -85,6 +85,7 @@ function compareTime() {
         document.querySelector('.set-time').textContent = 'Time to wake up!';
         // Play audio
         const alarmAudio = new Audio('../assets/media/digital-alarm-beeping.mp3');
+        alarmAudio.type = 'audio/mp3';
         alarmAudio.play();
     }
 }
